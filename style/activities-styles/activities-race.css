@@ -1,0 +1,232 @@
+.race-section {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.race-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.race-header h2 {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.race-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.race-slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.race-arrow-btn {
+    background-color: #1d2b75;
+    color: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    font-size: 1.1rem;
+    flex-shrink: 0; 
+    z-index: 10;
+}
+
+.race-arrow-btn:hover {
+    background-color: #f1c40f; 
+    transform: scale(1.05);
+}
+
+.race-arrow-btn:active {
+    transform: scale(0.95);
+}
+
+.race__track {
+    display: flex;
+    gap: 15px; 
+    width: 100%;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 15px; 
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+.race__track::-webkit-scrollbar {
+    display: none; 
+}
+
+.race__card {
+    flex: 0 0 240px; 
+    scroll-snap-align: start; 
+    height: 380px; 
+    border-radius: 16px; 
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.race__card:hover {
+    transform: translateY(-6px); 
+    box-shadow: 0 16px 10px rgba(82, 81, 81, 0.25);
+}
+
+.race__card-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding: 20px; 
+    box-sizing: border-box;
+}
+
+.race__card-body {
+    padding: 0; 
+    text-align: center; 
+    color: #ffffff;
+    width: 100%;
+}
+
+.race__card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
+.race__card-text {
+    font-size: 0.95rem;
+    color: #f0f0f0;
+    margin: 0 0 25px 0;
+    line-height: 1.5;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.race__card-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; 
+    margin-bottom: 15px;
+}
+
+.race__price-old {
+    font-size: 0.9rem;
+    color: #b2bec3; 
+    text-decoration: line-through; 
+    font-weight: 500;
+}
+
+.race__price-new {
+    font-size: 1.2rem;
+    color: #fff; 
+    font-weight: 700;
+}
+
+.race__card-btn {
+    background-color: #fff;
+    color: #f1c40f;
+    border: none;
+    padding: 12px 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.race__card-btn:hover {
+    background-color: #f1c40f; 
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .race-filter-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+    
+    .race-select-count {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES (.race-section)
+   ========================================== */
+
+body.dark-theme .race-section {
+    background-color: #333;
+    opacity: 0.9;
+}
+
+body.dark-theme .race-header h2 {
+    color: #ffffff;
+}
+
+body.dark-theme .race-header p {
+    color: #aaaaaa;
+}
+
+body.dark-theme .race-arrow-btn {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark-theme .race-arrow-btn:hover {
+    background-color: #f1c40f;
+    color: #121212;
+}
+
+body.dark-theme .race__card {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2c2c2c;
+}
+
+body.dark-theme .race__card:hover {
+    box-shadow: 0 16px 25px rgba(0, 0, 0, 0.8);
+    border-color: #f1c40f;
+}
+
+body.dark-theme .race__card-btn {
+    background-color: #1e1e1e;
+    color: #f1c40f;
+    border: 1px solid #f1c40f;
+}
+
+body.dark-theme .race__card-btn:hover {
+    background-color: #f1c40f;
+    color: #121212;
+}

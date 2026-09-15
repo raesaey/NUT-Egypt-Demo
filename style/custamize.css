@@ -1,0 +1,421 @@
+.search-page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.search-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-header h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--title-color, #2d3436);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.search-header p {
+    color: #636e72;
+    font-size: 1.1rem;
+}
+
+.wizard-section {
+    margin-bottom: 35px;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-title span {
+    background: #f1c40f;
+    color: #121212;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.search-tabs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.tab-card {
+    background: #ffffff;
+    border: 2px solid #eee;
+    border-radius: 14px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.tab-card i {
+    font-size: 1.8rem;
+    color: #636e72;
+    transition: color 0.3s ease;
+}
+
+.tab-card span {
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.tab-card:hover, .tab-card.active {
+    border-color: #f1c40f;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.tab-card.active {
+    background: #fffdf0;
+}
+
+.tab-card.active i {
+    color: #d4ac0d;
+}
+
+/* Step 2: Config Cards */
+.interactive-config-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.config-card {
+    position: relative;
+    background: #ffffff;
+    border: 2px solid #eee;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.config-card:focus-within, .config-card:hover {
+    border-color: #f1c40f;
+}
+
+.config-icon {
+    font-size: 1.5rem;
+    color: #f1c40f;
+    background: #fffdf0;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.config-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.config-info .main-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #b2bec3;
+    letter-spacing: 0.5px;
+}
+
+.config-info input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.config-info .sub-label {
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+.guests-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    color: #2d3436;
+    padding: 4px 0;
+}
+
+/* Guests Dropdown */
+.guests-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    box-sizing: border-box;
+    display: none;
+    z-index: 100;
+}
+
+.guests-card:focus-within .guests-dropdown,
+.guests-dropdown.active {
+    display: block;
+}
+
+.guest-type-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.guest-type-row:last-child {
+    border-bottom: none;
+}
+
+.guest-type-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.guest-type-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #2d3436;
+}
+
+.guest-type-desc {
+    font-size: 0.75rem;
+    color: #b2bec3;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.counter-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.counter-btn:hover:not(:disabled) {
+    background: #f1c40f;
+    border-color: #f1c40f;
+}
+
+.counter-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 50px;
+    border-top: 2px dashed #eee;
+    padding-top: 40px;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.results-header h2 {
+    font-size: 1.6rem;
+    color: #2d3436;
+    font-weight: 800;
+}
+
+.results-count {
+    color: #636e72;
+    font-weight: 600;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.match-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.match-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 15px;
+}
+
+.badge {
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-tags {
+    display: flex;
+    gap: 15px;
+    font-size: 0.8rem;
+    color: #636e72;
+    margin-bottom: 10px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: #2d3436;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: #636e72;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 15px;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-label {
+    font-size: 0.75rem;
+    color: #b2bec3;
+}
+
+.price-value {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #27ae60;
+}
+
+.action-btn {
+    background: #f1c40f;
+    color: #121212;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/*Dark Mood*/
+body.dark-theme .search-page-wrapper{
+    background-color: #333;
+    opacity: 0.9;
+}
+body.dark-theme .search-header h1,
+body.dark-theme .step-title,
+body.dark-theme .results-header h2,
+body.dark-theme .card-content h3,
+body.dark-theme .tab-card span,
+body.dark-theme .config-info input,
+body.dark-theme .guests-trigger,
+body.dark-theme .guest-type-title {
+    color: #ffffff;
+    border-color: #f1c40f;
+}
+
+body.dark-theme .tab-card,
+body.dark-theme .config-card,
+body.dark-theme .match-card,
+body.dark-theme .guests-dropdown {
+    background: #1e1e1e;
+    border-color: #2c2c2c;
+}
+
+body.dark-theme .tab-card.active {
+    background: #2a2510;
+}
+
+body.dark-theme .tab-card:hover {
+    border-color: #f1c40f;
+}
+
+body.dark-theme .config-icon {
+    background: #2a2510;
+}
+
+body.dark-theme .card-footer,
+body.dark-theme .guest-type-row {
+    border-color: #2c2c2c;
+}
+
+body.dark-theme .counter-btn {
+    background: #2c2c2c;
+    border-color: #3a3a3a;
+    color: #fff;
+}
+body.dark-theme .counter-value {
+    color: #fff;
+}

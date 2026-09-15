@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!--Here is the responsive code-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Rachel Saey">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Here is the fonts code-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Copse&display=swap" rel="stylesheet">
+
+    <!--Style sheet-->
+        <link rel="icon" type="image/x-icon" href="icons/logo-icon.jpeg">
+     <link rel="stylesheet" href="style/global.css">
+     <link rel="stylesheet" href="style/home-nav-bar.css">
+    <link rel="stylesheet" href="style/hero-section.css">
+     <link rel="stylesheet" href="style/packages-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        <title>Destination</title>
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<!--Navigation Bar-->
+<nav class="nav-flex" id="mainNav">
+    <div class="left-section">
+        <div class="side-bar">
+            <img class="js-sided-bar" src="icons/side-bar-icon - Copy.png" alt="bar icon">
+            <img title="glimmers" src="icons/logo-icon.jpeg" alt="logo icon">
+            <a href="home.html"><p>NUT</p></a>
+        </div>
+        <div class="logo-image"></div>
+    </div>
+
+    <div class="middle-section">
+        <ul class="middle-list">
+            <a href="home.html"><li>Home</li></a>
+            <a href="activities.html"><li>Activities</li></a>
+            <li class="knock-knock">Knock, knock!</li>
+        </ul>
+    </div>
+
+    <div class="right-section">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">
+                <img src="/images/dark-mood-images/icon/day-and-night.png" alt="theme icon">
+            </span>
+        </button>
+
+        <p class="my-bookings">My Bookings</p>
+        <div class="account">
+            <i><img src="icons/egyptian.png" alt="profile-picture"></i>
+        </div>
+    </div>
+</nav>
+
+    <!--sided bar-->
+<div class="sidebar-wrapper js-sidebar" id="sidebar">
+    <div class="sidebar-top">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="close-sidebar-btn js-close-sidebar" id="closeSidebar">&times;</button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Knock, knock</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar-bottom">
+        <ul class="sidebar-links-bottom">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sub-page Hero Section -->
+<div class="hero-section-container">
+    <div class="hero-background-image packages-hero-bg"></div>
+    <div class="hero-image-overlay"></div>
+    
+    <div class="hero-content">
+        <h1>Discover What Matches You</h1>
+        <h2>Uncover ancient history & unforgettable adventures</h2>
+        <p>Explore destinations crafted just for you</p>
+        <button class="hero-explore-btn">
+            Explore Now
+        </button>
+    </div>
+
+    <!-- Wave Divider -->
+<svg width="0" height="0" style="position: absolute;">
+      <defs>
+        <clipPath id="hero-wave-clip" clipPathUnits="objectBoundingBox">
+          <path d="M 0,0 L 1,0 L 1,0.9 C 0.8,0.98 0.6,0.85 0.4,0.92 C 0.2,0.98 0.1,0.9 0,0.95 Z" />
+        </clipPath>
+      </defs>
+    </svg>
+</div>
+
+<div class="packages-details-container">
+    
+  <!-- Left Column: Main Package Content -->
+  <main class="packages-main-content js-packages-main-content">
+
+  </main>
+
+  <!-- Right Column: Sticky Payment & Price Breakdown Sidebar -->
+  <aside class="packages-sidebar">
+    <div class="packages-payment-card">
+      <h3>Payment Summary</h3>
+      
+      <table class="packages-payment-table">
+        <tbody>
+<tr>
+    <td class="js-base-package">
+        Base Package (x2)
+    </td>
+
+    <td class="amount js-base-price">
+        EGP 320
+    </td>
+</tr>
+
+<tr>
+    <td>
+        Service Fee
+    </td>
+
+    <td class="amount js-service-fee">
+        EGP 200
+    </td>
+</tr>
+
+<tfoot>
+    <tr class="total-row">
+
+        <td>
+            Total Due
+        </td>
+
+        <td class="amount js-total-due">
+            EGP 520
+        </td>
+
+    </tr>
+</tfoot>
+      </table>
+
+      <p class="packages-payment-note">🔒 Safe & encrypted checkout process</p>
+    </div>
+  </aside>
+
+</div>
+
+<!--all pages footer-->
+<main>
+        <div class="container main-content">
+            <h1>NUT, make yourself home.</h1>
+        </div>
+    </main>
+
+<footer class="footer-ecom" role="contentinfo">
+    <div class="container">
+        <div class="footer-ecom__main">
+            <div class="footer-ecom__links">
+                <h3 class="footer-ecom__heading">Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-ecom__links">
+                <h3 class="footer-ecom__heading">About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Tour Guides</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-ecom__links">
+                <h3 class="footer-ecom__heading">My Account</h3>
+                <ul>
+                    <li><a href="#">Sign In / Register</a></li>
+                    <li><a href="#">My Orders</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                </ul>
+            </div>
+            <div class="footer-ecom__newsletter">
+                <h3 class="footer-ecom__heading">Stay Connected</h3>
+                <p>Get exclusive deals, new product announcements, and more.</p>
+                <form class="footer-ecom__newsletter-form">
+                    <label for="newsletter-email">Email Address</label>
+                    <input type="email" id="newsletter-email" class="footer-ecom__newsletter-input" placeholder="your@email.com">
+                    <button type="submit" class="footer-ecom__newsletter-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-ecom__bottom">
+            <p class="footer-ecom__copyright">&copy; 2025 YourStore Inc. All Rights Reserved.</p>
+            <div class="footer-ecom__payment-icons" aria-label="Accepted payment methods">
+                <ul>
+                    <li><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Credit Card</title><path d="M21.18,3.93H2.82A2.82,2.82,0,0,0,0,6.75v10.5A2.82,2.82,0,0,0,2.82,20.07H21.18A2.82,2.82,0,0,0,24,17.25V6.75A2.82,2.82,0,0,0,21.18,3.93Zm-18.36,3H21.18a.14.14,0,0,1,.14.14V9.6H2.68V7.07A.14.14,0,0,1,2.82,6.93Zm18.36,10.32H2.82a.14.14,0,0,1-.14-.14V12.42H21.32v4.69A.14.14,0,0,1,21.18,17.25Z"/></svg></li>
+                    <li><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bank Transfer</title><path d="M12,1.5,1.5,6.23v1.44H22.5V6.23Zm8.91,15.5H12.4v-9H10.6v9H2.09V9.6H.15v9a1.44,1.44,0,0,0,1.44,1.44H22.41a1.44,1.44,0,0,0,1.44-1.44v-9H21.09Z"/></svg></li>
+                    <li><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Digital Wallet</title><path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,13a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V7A1,1,0,0,1,5,6H19a1,1,0,0,1,1,1Z M17,11H7a1,1,0,0,0,0,2H17a1,1,0,0,0,0-2Z"/></svg></li>
+                    <li><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Secure Payment</title><path d="M18,9H17V6A5,5,0,0,0,7,6V9H6a3,3,0,0,0-3,3v7a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3V12A3,3,0,0,0,18,9ZM9,6a3,3,0,0,1,6,0V9H9Zm10,13a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1H18a1,1,0,0,1,1,1Z"/></svg></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!--float cart-->
+    <div class="floating-cart">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <span class="cart-badge">0</span>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/package-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+.snap-section {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.snap-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.snap-title h2 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.snap-title p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.memories-gallery {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: auto; 
+}
+
+.polaroid-card {
+    background: #ffffff;
+    padding: 15px 15px 25px 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+    border-radius: 2px;
+    width: 280px; 
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+}
+
+.polaroid-card:nth-child(1) { transform: rotate(-3deg); }
+.polaroid-card:nth-child(2) { transform: rotate(2deg); }
+.polaroid-card:nth-child(3) { transform: rotate(-1deg); }
+
+.polaroid-card:hover {
+    transform: translateY(-10px) rotate(0deg);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.polaroid-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.polaroid-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.polaroid-caption {
+    text-align: center;
+}
+
+.polaroid-caption h4 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.polaroid-caption p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.polaroid-price {
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.polaroid-btn {
+    background-color: #f1c40f;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.polaroid-btn:hover {
+    background-color: #fff;
+    color: #f1c40f;
+    border: 1px solid #f1c40f;
+}
+
+.snap-slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+
+.snap-arrow-btn {
+    background-color: #1d2b75; 
+    color: #fff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+    flex-shrink: 0; 
+    z-index: 15; 
+}
+
+.snap-arrow-btn:hover {
+    background-color: #f1c40f; 
+    transform: scale(1.05);
+}
+
+.snap-arrow-btn:active {
+    transform: scale(0.95);
+}
+
+.memories-gallery {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.memories-gallery::-webkit-scrollbar {
+    display: none;
+}

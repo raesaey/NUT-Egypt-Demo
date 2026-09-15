@@ -1,0 +1,563 @@
+.display-card-destination-details {
+    --bg-main: #f9f9f9;
+    --bg-card: #ffffff;
+    --bg-input: #f9fafb;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #1d2b75;      
+    --accent-hover: #121212;
+    --btn-bg: #f1c40f;          
+    --btn-hover-color: #ffffff;
+    --success-color: #059669;
+    --border-color: #eeeeee;
+    --badge-bg: rgba(241, 196, 15, 0.15);
+    --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 60px 15px 0px 15px;
+    max-width: 1200px;
+    margin: 40px auto 20px auto; 
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 16px;
+    direction: ltr;
+}
+
+.display-card-destination-details .trip-page-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 968px) {
+    .display-card-destination-details .trip-page-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.display-card-destination-details .trip-main-content, 
+.display-card-destination-details .trip-payment-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.display-card-destination-details .trip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 35px;
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .trip-title {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.display-card-destination-details .price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.display-card-destination-details .price-badge {
+    background: var(--btn-bg);
+    color: #121212;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.display-card-destination-details .price-period {
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+.display-card-destination-details .price-sale-tag p {
+    color: red;
+    text-decoration: line-through;
+    text-align: left;
+    font-size: 14px;
+}
+
+.display-card-destination-details .trip-rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    padding: 15px 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .stars {
+    color: #f1c40f;
+    letter-spacing: 2px;
+}
+
+.display-card-destination-details .rating-score {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.display-card-destination-details .rating-count {
+    color: var(--text-secondary);
+}
+
+.display-card-destination-details .trip-description, 
+.display-card-destination-details .trip-overview-details {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .trip-overview-details h3, 
+.display-card-destination-details .div-terms-policies h3, 
+.display-card-destination-details .payment-card h3, 
+.display-card-destination-details .reviews-slider-card h3 {
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.display-card-destination-details .gallery-to-show-trip-photos {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .slider-wrapper {
+    position: relative;
+    height: 300px;
+}
+
+.display-card-destination-details .slider-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.display-card-destination-details .sale-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.display-card-destination-details .sale-tag p {
+    margin: 0;
+}
+
+.display-card-destination-details .slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.display-card-destination-details .slider-btn {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.display-card-destination-details .slider-btn:hover {
+    background: var(--btn-bg);
+    color: #121212;
+}
+
+.display-card-destination-details .include-exclude-container {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .table-has-include-exclude {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.display-card-destination-details .table-has-include-exclude th, 
+.display-card-destination-details .table-has-include-exclude td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.display-card-destination-details .included-header {
+    color: var(--success-color);
+}
+
+.display-card-destination-details .excluded-header {
+    color: #e74c3c;
+}
+
+.display-card-destination-details .table-has-include-exclude td {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.display-card-destination-details .div-terms-policies-wrapper {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .div-terms-policies ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.display-card-destination-details .div-terms-policies li {
+    margin-bottom: 6px;
+}
+
+.display-card-destination-details .booking-calculator-section {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .pricing-notice-badge {
+    background: var(--badge-bg);
+    border: 1px solid var(--btn-bg);
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.display-card-destination-details .travelers-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .display-card-destination-details .travelers-selection-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.display-card-destination-details .guest-selector-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.display-card-destination-details .guest-selector-group label {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.display-card-destination-details .age-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.display-card-destination-details .guest-select {
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.display-card-destination-details .booking-action-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.display-card-destination-details .calculator-result-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-card-destination-details .calc-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.display-card-destination-details .calc-amount {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.display-card-destination-details .btn-add-to-trips {
+    background-color: var(--btn-bg);
+    color: #121212;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.display-card-destination-details .btn-add-to-trips:hover {
+    background-color: var(--accent-hover);
+    color: var(--btn-hover-color);
+    box-shadow: 0 4px 10px rgba(241, 196, 15, 0.4);
+}
+
+.display-card-destination-details .payment-card, 
+.display-card-destination-details .reviews-slider-card {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.display-card-destination-details .payment-breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+}
+
+.display-card-destination-details .payment-breakdown-table td {
+    padding: 10px 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.display-card-destination-details .payment-breakdown-table .amount {
+    text-align: right;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.display-card-destination-details .total-row td {
+    font-weight: bold;
+    color: var(--text-primary) !important;
+    font-size: 1.05rem;
+    border-bottom: none;
+}
+
+.display-card-destination-details .payment-note {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 0;
+}
+
+
+.display-card-destination-details .reviews-slider-wrapper {
+    min-height: 90px;
+    margin-bottom: 16px;
+}
+
+.display-card-destination-details .review-slide {
+    display: none;
+}
+
+.display-card-destination-details .review-slide.active {
+    display: block;
+}
+
+.display-card-destination-details .review-stars {
+    color: #f1c40f;
+    margin-bottom: 8px;
+}
+
+.display-card-destination-details .review-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0 0 8px 0;
+}
+
+.display-card-destination-details .reviewer-name {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.display-card-destination-details .reviews-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-card-destination-details .rev-btn {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.display-card-destination-details .rev-btn:hover {
+    background: var(--btn-bg);
+    color: #121212;
+}
+
+.display-card-destination-details .rev-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.display-card-destination-details .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    display: inline-block;
+}
+
+.display-card-destination-details .dot.active {
+    background: var(--btn-bg);
+}
+
+
+/* ==========================================
+   DARK MODE - (المطابق تماماً لـ body.dark-theme لديك)
+   ========================================== */
+
+body.dark-theme .display-card-destination-details {
+    background-color: #333;
+    opacity: 0.95;
+    border: 1px solid #2c2c2c;
+}
+
+body.dark-theme .display-card-destination-details .trip-header,
+body.dark-theme .display-card-destination-details .trip-rating-bar,
+body.dark-theme .display-card-destination-details .trip-description,
+body.dark-theme .display-card-destination-details .trip-overview-details,
+body.dark-theme .display-card-destination-details .gallery-to-show-trip-photos,
+body.dark-theme .display-card-destination-details .include-exclude-container,
+body.dark-theme .display-card-destination-details .div-terms-policies-wrapper,
+body.dark-theme .display-card-destination-details .booking-calculator-section,
+body.dark-theme .display-card-destination-details .payment-card,
+body.dark-theme .display-card-destination-details .reviews-slider-card {
+    background: #1e1e1e;
+    border-color: #2c2c2c;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .display-card-destination-details .trip-title,
+body.dark-theme .display-card-destination-details .rating-score,
+body.dark-theme .display-card-destination-details .trip-overview-details h3,
+body.dark-theme .display-card-destination-details .div-terms-policies h3,
+body.dark-theme .display-card-destination-details .payment-card h3,
+body.dark-theme .display-card-destination-details .reviews-slider-card h3,
+body.dark-theme .display-card-destination-details .guest-selector-group label,
+body.dark-theme .display-card-destination-details .reviewer-name,
+body.dark-theme .display-card-destination-details .total-row td,
+body.dark-theme .display-card-destination-details .pricing-notice-badge,
+body.dark-theme .display-card-destination-details .payment-breakdown-table .amount {
+    color: #ffffff !important;
+}
+
+body.dark-theme .display-card-destination-details .trip-description,
+body.dark-theme .display-card-destination-details .trip-overview-details p,
+body.dark-theme .display-card-destination-details .rating-count,
+body.dark-theme .display-card-destination-details .table-has-include-exclude td,
+body.dark-theme .display-card-destination-details .div-terms-policies li,
+body.dark-theme .display-card-destination-details .age-label,
+body.dark-theme .display-card-destination-details .calc-label,
+body.dark-theme .display-card-destination-details .payment-breakdown-table td,
+body.dark-theme .display-card-destination-details .payment-note,
+body.dark-theme .display-card-destination-details .review-text {
+    color: #bbbbbb !important;
+}
+
+body.dark-theme .display-card-destination-details .guest-select {
+    background: #2c2c2c;
+    color: #ffffff;
+    border-color: #3f3f3f;
+}
+
+body.dark-theme .display-card-destination-details .calc-amount {
+    color: #ffffff !important;
+}
+
+body.dark-theme .display-card-destination-details .btn-add-to-trips {
+    background-color: #f1c40f;
+    color: #121212;
+}
+
+body.dark-theme .display-card-destination-details .btn-add-to-trips:hover {
+    background-color: #f1c40f;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(238, 218, 37, 0.4);
+}
+
+body.dark-theme .display-card-destination-details .rev-btn {
+    background: #2c2c2c;
+    color: #ffffff;
+}
+
+body.dark-theme .display-card-destination-details .rev-btn:hover {
+    background: #f1c40f;
+    color: #121212;
+}
