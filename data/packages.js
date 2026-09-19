@@ -1,7 +1,7 @@
 export const packages = [
   {
     id: "cairo-giza-highlights",
-    image: "../images/destinations/pyramids-img.jfif",
+    image: "./images/destinations/pyramids-img.jfif",
     name: "Cairo & Giza Highlights",
     oldPrice: 180,
     newPrice: 160,
@@ -54,7 +54,7 @@ export const packages = [
   // 2. Cairo Heritage Escape
   {
     id: "cairo-heritage-escape",
-    image: '../images/governorate/islamic-cairo.jfif',
+    image: './images/governorate/islamic-cairo.jfif',
     name: "Cairo Heritage Escape",
     oldPrice: 160,
     newPrice: 140,
@@ -108,7 +108,7 @@ export const packages = [
   // 3. Ancient Egypt Explorer
   {
     id: "ancient-egypt-explorer",
-    image: '../images/destinations/grand.jpg',
+    image: './images/destinations/grand.jpg',
     name: "Ancient Egypt Explorer",
     oldPrice: 200,
     newPrice: 180,
@@ -162,7 +162,7 @@ export const packages = [
   // 4. Cairo & Fayoum Nature Escape
   {
     id: "cairo-fayoum-nature-escape",
-    image: "../images/destinations/fayoum.jpg",
+    image: "./images/destinations/fayoum.jpg",
     name: "Cairo & Fayoum Nature Escape",
     oldPrice: 300,
     newPrice: 280,
@@ -226,7 +226,7 @@ export const packages = [
   // 5. Cairo & Alexandria Heritage
   {
     id: "cairo-alexandria-heritage",
-    image: "../images/governorate/alexandria-img.jfif",
+    image: "./images/governorate/alexandria-img.jfif",
     name: "Cairo & Alexandria Heritage",
     oldPrice: 500,
     newPrice: 475,
