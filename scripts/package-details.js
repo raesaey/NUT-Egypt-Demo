@@ -41,11 +41,11 @@ if (!packaging) {
             <div class="packages-price-box">
 
                 <span class="packages-old-price">
-                    EGP ${packaging.oldPrice}
+                    US ${packaging.oldPrice}
                 </span>
 
                 <span class="packages-new-price">
-                    EGP ${packaging.newPrice}
+                    US ${packaging.newPrice}
                 </span>
 
             </div>
@@ -278,7 +278,7 @@ if (!packaging) {
             </span>
 
             <span class="amount js-calculated-total">
-                EGP ${packaging.newPrice * 2}
+                US ${packaging.newPrice * 2}
             </span>
 
         </div>
@@ -307,7 +307,7 @@ guestCount.addEventListener('change', () => {
 
     const total = packaging.newPrice * numberOfPeople;
 
-    calculatedTotal.textContent = `EGP ${total}`;
+    calculatedTotal.textContent = `US ${total}`;
 });
 }
 
@@ -334,14 +334,14 @@ guestCount.addEventListener('change', () => {
     const total = packaging.newPrice * numberOfPeople;
 
     // Update calculated total
-    calculatedTotal.textContent = `EGP ${total}`;
+    calculatedTotal.textContent = `$${total}`;
 
     // Update sidebar
     basePackageText.textContent = `Base Package (x${numberOfPeople})`;
 
-    basePackagePrice.textContent = `EGP ${total}`;
+    basePackagePrice.textContent = `$${total}`;
 
     // Update final total
-    totalDue.textContent = `EGP ${total + serviceFee}`;
+    totalDue.textContent = `$${total + serviceFee}`;
 
 });
